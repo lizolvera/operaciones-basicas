@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones básicas js - paso de parámetros Aplicaciones WEb</title>
+    <link rel="stylesheet" href="style.css">
+
+
+
+
+</head>
+<body>
+    <h1>Operaciones básicas js - paso de parámetros Aplicaciones Web </h1>
+    <div id="resultado">4 + 4 = 8</div>
+    <button onclick="realizarlaOperacion(4, 4, '+')">+</button>
+    <button onclick="realizarlaOperacion(4, 4, '-')">-</button>
+    <button onclick="realizarlaOperacion(4, 4, '*')">*</button>
+    <button onclick="realizarlaOperacion(4, 4, '/')">/</button>
+
+    <script>
+        function realizarlaOperacion(valor1, valor2, operador) {
+            let resultado;
+            switch (operador) {
+                case '+':
+                    resultado = valor1 + valor2;
+                    break;
+                case '-':
+                    resultado = valor1 - valor2;
+                    break;
+                case '*':
+                    resultado = valor1 * valor2;
+                    break;
+                case '/':
+                    resultado = valor1 / valor2;
+                    break;
+                default:
+                    resultado = 'Operador no válido';
+            }
+            document.getElementById('resultado').innerText = `${valor1} ${operador} ${valor2} = ${resultado}`;
+        }
+    </script>
+</body>
+</html>
